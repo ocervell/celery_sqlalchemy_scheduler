@@ -22,6 +22,9 @@ from sqlalchemy_scheduler_models import DatabaseSchedulerEntry, CrontabSchedule,
 Session = sessionmaker(autocommit=False, autoflush=False)
 dbsession = Session()
 
+# Add new stuff
+newstuff()
+
 
 class Entry(ScheduleEntry):
     model_schedules = ((schedules.crontab, CrontabSchedule, 'crontab'),
